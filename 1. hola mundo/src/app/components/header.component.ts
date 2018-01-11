@@ -3,9 +3,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
-  template: 
+  templateUrl: 'header.component.html'
 })
-export class AppComponent {
-  nombre = 'Oscar';
-  apellido = 'Martinez';
+export class HeaderComponent {
+
 }

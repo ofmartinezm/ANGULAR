@@ -1,0 +1,26 @@
+ANDROID_HOME=C:\Users\oscar.martinez\AppData\Local\Android\Sdk
+PATH=C:\Users\oscar.martinez\AppData\Local\Android\Sdk\tools;C:\Users\oscar.martinez\AppData\Local\Android\Sdk\tools\bin; C:\Users\oscar.martinez\AppData\Local\Android\Sdk\platform-tools
+
+
+npm install -g ionic@latest
+
+
+Cannot find module '@ionic/app-scripts'
+npm i @ionic/app-scripts
+npm install @ionic/app-scripts@latest --save-dev
+
+
+
+Error: Cannot find module 'typescript'
+npm install --save-dev @angular/cli@latest
+
+Error: ENOENT: no such file or directory, scandir
+npm rebuild node-sass
+
+npm install
+
+----comandos ionic
+ionic start nombreaplicacion nombreplantilla
+ionic start --list // genera el listado de todas las plantillas que tiene disponible
+
+ionic serve // sube el servidor

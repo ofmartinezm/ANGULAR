@@ -19,6 +19,10 @@ npm rebuild node-sass
 
 npm install
 
+https://apps.ionic.io/
+usuario ofmartinezm
+crear nueva nombreaplicacion
+
 ----comandos ionic
 ionic start nombreaplicacion nombreplantilla
 ionic start --list // genera el listado de todas las plantillas que tiene disponible

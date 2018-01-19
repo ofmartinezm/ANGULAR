@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-segment [(ngModel)]="seleccion">
+    <ion-segment-button value="grupo1">Grupo 1</ion-segment-button>
+    <ion-segment-button value="grupo2">Grupo 2</ion-segment-button>
+    <ion-segment-button value="grupo3">Grupo 3</ion-segment-button>
+  </ion-segment>
+
+<div *ngIf="seleccion=='grupo1'">
+  <button ion-button color="danger">Danger</button>
+  <button ion-button full>Full</button>
+  <button ion-button block>Block</button>
+  <ion-grid no-padding>
+    <ion-row>
+      <ion-col>
+        <button ion-button block>Boton 1</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button block>Boton 2</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button block>Boton 3</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+
+<div *ngIf="seleccion=='grupo2'">
+  <button ion-button round>round</button>
+  <button ion-button samll>small</button>
+  <button ion-button large>large</button>
+</div>
+
+<div *ngIf="seleccion=='grupo3'">
+  <button ion-button outline>outline</button>
+  <button ion-button round outline>roundOutline</button>
+  <button ion-button clear>clear</button>
+  <ion-icon name="analytics"></ion-icon>
+  <button ion-button color="dark" icon-left><ion-icon name="analytics"></ion-icon>Analitics</button>
+  <button ion-button color="dark" icon-right>add-circle<ion-icon name="add-circle"></ion-icon></button>
+
+  <button ion-button color="dark" icon-only><ion-icon name="analytics"></ion-icon></button>
+  <button ion-button color="dark" icon-only clear><ion-icon name="analytics"></ion-icon></button>
+  <button ion-button color="dark" icon-only outline><ion-icon name="analytics"></ion-icon></button>
+
+</div>
+
+
+
+
+
+</ion-content>

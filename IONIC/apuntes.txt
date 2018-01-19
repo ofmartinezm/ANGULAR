@@ -1,9 +1,14 @@
+https://blog.ng-classroom.com/blog/ionic2/clase-1-feed/
+
 ANDROID_HOME=C:\Users\oscar.martinez\AppData\Local\Android\Sdk
 PATH=C:\Users\oscar.martinez\AppData\Local\Android\Sdk\tools;C:\Users\oscar.martinez\AppData\Local\Android\Sdk\tools\bin; C:\Users\oscar.martinez\AppData\Local\Android\Sdk\platform-tools
 
 
 npm install -g ionic@latest
 
+npm install -g cordova // instalacion apache cordova
+
+ionic integrations enable cordova --quiet // habilitar integracion con apache cordova
 
 Cannot find module '@ionic/app-scripts'
 npm i @ionic/app-scripts
@@ -23,8 +28,94 @@ https://apps.ionic.io/
 usuario ofmartinezm
 crear nueva nombreaplicacion
 
+ionic login correo@com.comandos //conectarse a ionic view
+
+ionic link  // relaciona la aplicacion local con la que esta en ionic view
+
+3. Push your code up to the dashboard!
+git push -u origin master
+
+4. Add your own external Repository as the default origin (optional)
+git remote add origin [YOUR_REPOSITORY_URL]
+git push --set-upstream origin master
+TermsPrivacy Policy© 2017 Drifty Co.  v0.0.443
+IonicDocsBlogHelp & SupportStatus
+
+Cangrejo76
+
+
+
+
 ----comandos ionic
 ionic start nombreaplicacion nombreplantilla
 ionic start --list // genera el listado de todas las plantillas que tiene disponible
+ionic generate provider nombre// crear un provider 
+
+Next Steps:
+* Go to your newly created project: cd .\mytabsapp1
+* Get Ionic DevApp for easy device testing: https://bit.ly/ionic-dev-app
+
 
 ionic serve // sube el servidor
+ionic serve --lab //sube el servidor pero se pueden elegir diferentes plataformas android - ios - windows
+ionic serve --android // especifica la plataforma a ejecutar
+
+ionic cordova platform add android  // adiciona plataforma que voy a probar localmente
+ionic cordova emulate android // para cargar la aplicacion en el emulador de android
+
+//adicion de una nueva pagina
+ionic generate page nombrepagina // generar una nueva pagina
+
+ira a app.module.ts adicionar los import y en las secciones declarations y entryComponents adicionar
+los datos de la nueva pagina
+
+ir a tabs.html adicionar la entrada respectiva 
+
+ir a tabs.ts adicionar el import y la variable correspondiente en TabsPage
+
+vovler a subir el ionic serve y probar la aplicacion.
+
+///
+en tabs.html se puede adicionar propiedades al <ion-tabs>
+selectecIndex para indicar si se quiere seleccionar alguna pagina por defecto
+tabsLayout="title-hide" // para que no muestre trexto en los iconos del menu, y otras opciones para 
+ocultar el icono, o que muestre el texto del icono en la parte superior
+
+
+//// SASS es para trabajar con estilos pero mejorados
+cambiar fondo de la seccion del menu 
+en el archivo variables.scss
+$tabs-background:#999; //sobreescribe variables que vienen por defecto
+//se pueden crear nuevas variables
+$textoAlerta: #ff0000;
+vienen definidos colores; primary, secundary, etc;
+se adiciona el atributo color="danger" en algun elemento html, se pueden añadir variables nuevas de color
+y llamarlas en los archivos especificos de cada session .scss
+
+se puede añadir como un estilo css directamente eje;
+h2{
+	color: map-get($colors,danger);
+}
+
+
+
+referencia de iconos 
+https://ionicframework.com/docs/ionicons/
+
+cargar la pagina en el navegador y mostrarlo como si estuviera en android o ios
+localhost:8100/ionic-lab
+
+
+<ion-header no-border> para me muestre linea el encabezado 
+///
+<ion-item *ngFor="let item of miLista" text-left no-padding>
+
+        <ion-avatar item-left><img [src]="'assets/iconos/ico_'+item.id+'.png'"/></ion-avatar>
+        <h2  item-right>{{item.titulo}}</h2>
+        <p item-right>{{item.descripcion}}</p>
+      </ion-item>
+	  
+	  //
+
+	  
+	  problema de cross domain desgargar una extension cors para el navegador

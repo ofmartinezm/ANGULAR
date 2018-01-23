@@ -1,3 +1,4 @@
+https://code.tutsplus.com/es/articles/introduction-to-ionic-2--cms-28193
 https://blog.ng-classroom.com/blog/ionic2/clase-1-feed/
 
 ANDROID_HOME=C:\Users\oscar.martinez\AppData\Local\Android\Sdk
@@ -119,3 +120,11 @@ localhost:8100/ionic-lab
 
 	  
 	  problema de cross domain desgargar una extension cors para el navegador
+	  
+//adicionar componentes que se pueden compartir entre paginas u otras aplicaciones
+ionic generate coomponent nombreComponente
+
+añadir en  app.module.ts el import
+import { CustomHeaderComponent } from '../components/custom-header/custom-header';
+luego en declarations adicionar;
+CustomHeaderComponent

@@ -15,6 +15,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { DatosProvider } from '../providers/datos/datos';
 
+import { CustomHeaderComponent } from '../components/custom-header/custom-header';
+
+
 import { HttpModule } from '@angular/http';
 
 @NgModule({
@@ -24,7 +27,8 @@ import { HttpModule } from '@angular/http';
     ContactPage,
     HomePage,
     TabsPage,
-    FormularioPage
+    FormularioPage,
+    CustomHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,8 @@ import { HttpModule } from '@angular/http';
     ContactPage,
     HomePage,
     TabsPage,
-    FormularioPage
+    FormularioPage,
+
   ],
   providers: [
     StatusBar,

@@ -8,6 +8,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { FormularioPage } from '../pages/formulario/formulario';
+import { InfoPage } from '../pages/info/info';
+import { DetallePage } from '../pages/detalle/detalle';
 
 
 
@@ -28,7 +30,9 @@ import { HttpModule } from '@angular/http';
     HomePage,
     TabsPage,
     FormularioPage,
-    CustomHeaderComponent
+    CustomHeaderComponent,
+    DetallePage,
+    InfoPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,8 @@ import { HttpModule } from '@angular/http';
     HomePage,
     TabsPage,
     FormularioPage,
-
+    InfoPage,
+    DetallePage,
   ],
   providers: [
     StatusBar,

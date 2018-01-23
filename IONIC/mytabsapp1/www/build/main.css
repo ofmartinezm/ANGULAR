@@ -25678,6 +25678,14 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+custom-header .toolbar-ios {
+  padding-top: 20px !important;
+}
+
+custom-header ion-title.title-ios {
+  padding-top: 15px !important;
+}
+
 page-home h2 {
   color: #ff0000;
 }

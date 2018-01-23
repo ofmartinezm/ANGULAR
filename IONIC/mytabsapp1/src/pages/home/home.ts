@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {DatosProvider} from '../../providers/datos/datos';
+import {DetallePage} from '../detalle/detalle'
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -41,5 +42,11 @@ loadData(){
     }, 500
     )
   }
+
+  irDetalle(item){
+    this.navCtrl.push(DetallePage,{datos:item});
+  }
+
+
 
 }

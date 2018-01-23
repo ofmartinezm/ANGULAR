@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { InfoPage } from '../../pages/info/info';
 
 /**
  * Generated class for the CustomHeaderComponent component.
@@ -11,12 +13,16 @@ import { Component } from '@angular/core';
   templateUrl: 'custom-header.html'
 })
 export class CustomHeaderComponent {
+  @Input()
+  titulo: string;
 
-  text: string;
+  constructor(public navCtrl: NavController) {
 
-  constructor() {
-    console.log('Hello CustomHeaderComponent Component');
-    this.text = 'Hello World';
+  }
+
+  irInfo(){
+    this.navCtrl.push(InfoPage);
+
   }
 
 }

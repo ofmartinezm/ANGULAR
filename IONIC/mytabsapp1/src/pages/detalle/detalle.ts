@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
-/**
- * Generated class for the DetallePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -15,12 +10,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DetallePage {
   item;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  modal:boolean=false;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewController:ViewController) {
     this.item=navParams.data.datos;
+if(navParams.data.modal){
+  this.modal=navParams.data.modal;
+
+}
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetallePage');
   }
+
+  Cerrar(){
+    this.viewController.dismiss();
+  }
+
+
 
 }

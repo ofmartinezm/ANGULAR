@@ -10,7 +10,7 @@
     <ion-list-header color="light">Mi encabezado de lista</ion-list-header>
     <ion-item-group>
       <ion-item *ngFor="let item of miLista" text-left no-padding text-wrap>
-        <ion-avatar item-left><img [src]="'assets/iconos/ico_'+item.id+'.png'"/></ion-avatar>
+        <ion-avatar item-left><img [src]="'assets/iconos/ico_'+item.id+'.png'" (click)="abreModal(item)"/></ion-avatar>
         <h2  >{{item.titulo}}</h2>
         <p >{{item.descripcion}}</p>
         <ion-toggle item-right color="danger" ></ion-toggle>

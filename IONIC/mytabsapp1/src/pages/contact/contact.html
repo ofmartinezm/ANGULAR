@@ -1,13 +1,40 @@
 <ion-header>
-  <custom-header [titulo]="'Contact'"></custom-header>
+  <custom-header  [titulo]="'Contact'"></custom-header>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <h2>Contacto</h2>
+  <form #miformulario = "ngForm" (ngSubmit)="enviarForm(miformulario)">
+    <ion-list>
+      <ion-list-header>Template Form</ion-list-header>
+      <ion-item>
+        <ion-label fixed>Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="contacto.nombre" name="nombre" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Apellidos</ion-label>
+        <ion-input type="string"  [(ngModel)]="contacto.apellidos" name="apellidos" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button block type="submit" [disabled]="!miformulario.valid">Enviar</button>
+      </ion-item>
+    </ion-list>
+  </form>
+  <form [formGroup]="miForm"(ngSubmit)="enviarForm2()">
+    <ion-list>
+      <ion-list-header>Data Driven Form</ion-list-header>
+      <ion-item>
+        <ion-label fixed>Nombre</ion-label>
+        <ion-input type="text" formControlName="nombre"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="miForm.controls.nombre.valid">
+        <ion-label fixed>Apellidos</ion-label>
+        <ion-input type="string" formControlName="apellidos" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <button ion-button block type="submit" >Enviar</button>
+      </ion-item>
+    </ion-list>
+  </form>
+
 </ion-content>

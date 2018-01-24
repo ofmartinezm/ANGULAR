@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'formulario.html',
 })
 export class FormularioPage {
-
+  colorSeleccionado;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

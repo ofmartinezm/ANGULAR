@@ -1,3 +1,9 @@
+Ionic 3 + Firebase + native Facebook login
+Read more at: https://beat.10ztalk.com/2017/12/05/ionic-3-firebase-native-facebook-login/
+
+documentacion de ionic
+https://ionicframework.com/docs
+
 https://code.tutsplus.com/es/articles/introduction-to-ionic-2--cms-28193
 https://blog.ng-classroom.com/blog/ionic2/clase-1-feed/
 
@@ -117,6 +123,8 @@ localhost:8100/ionic-lab
       </ion-item>
 	  
 	  //
+	  
+	  
 
 	  
 	  problema de cross domain desgargar una extension cors para el navegador
@@ -128,3 +136,41 @@ añadir en  app.module.ts el import
 import { CustomHeaderComponent } from '../components/custom-header/custom-header';
 luego en declarations adicionar;
 CustomHeaderComponent
+
+
+
+//// apache cordova buscar en ionic native/core
+hacer la instalación  generica
+ npm install @ionic-native/core --save
+ //luego se instala el pluggin especifico
+ 
+ se debe hacer la importación del pluggin en el modulo.ts y en el controlador donde se va a ejecutar
+ 
+ //se utiliza para ejecutar la aplicacion directamente en el telefono
+ ionic cordova run plataforma(android)
+ 
+ 
+ //para validar si tenemos un telefono configurado y si esta instalado el developer de android
+ adb devices
+ 
+ // en el navegador
+ chrome://inspect/#devices
+ //saca la lista de los dispositivos conectados al pc
+ 
+ //genera el apk lo deja en la ruta 
+ ionic cordova  build android --release
+ 
+ //generar la llave
+ keytool -genkey -v -keystore curso-key
+.keystore -alias curso -keyalg RSA -keysize 2048 -validity 10000
+
+//firmar la aplicacionjarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore curso-key.keystore D:\GIT_ANGULAR\ION
+IC\mytabsapp1\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk curso
+
+//alinear la firmar
+C:\Users\oscar.martinez\AppData\Local\Android\Sdk\build-tools\26.0.2\zipalign -v 4 D:\GIT_ANGULAR\IONI
+C\mytabsapp1\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk MiCursoOfmm.apk
+ 
+ //developer.android.com
+ 
+ 

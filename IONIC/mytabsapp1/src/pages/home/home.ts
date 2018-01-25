@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import {DatosProvider} from '../../providers/datos/datos';
 import {DetallePage} from '../detalle/detalle'
 import {ModalController} from 'ionic-angular';
+import { Geolocation } from '@ionic-native/geolocation';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -19,8 +20,14 @@ miLista:Array<any>=[
 
 ];
 listaNombres=[];
-  constructor(public navCtrl: NavController,public datosProvider:DatosProvider, public modalController: ModalController) {
+  constructor(public navCtrl: NavController,public datosProvider:DatosProvider,
+    public modalController: ModalController, public geo:Geolocation) {
     this.loadData();
+    let watch=this.geo.watchPosition();
+    watch.subscribe((data)=>{
+      console.log(data.coords.latitude+" --"+data.coords.longitude);
+
+    })
   }
 
 loadData(){
@@ -52,6 +59,20 @@ loadData(){
   modal.present();
 
   }
+
+  getpos(){
+      this.geo.getCurrentPosition()
+        .then(data=>{
+          console.log(data.coords.latitude+" --"+data.coords.longitude);
+        })
+
+        .catch(err=>{
+          console.log(err)
+        })
+
+      }
+
+
 
 
 

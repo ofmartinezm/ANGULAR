@@ -22,6 +22,8 @@ import { CustomHeaderComponent } from '../components/custom-header/custom-header
 
 import { HttpModule } from '@angular/http';
 
+import { Geolocation } from '@ionic-native/geolocation';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -53,8 +55,10 @@ import { HttpModule } from '@angular/http';
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DatosProvider
+    DatosProvider,
+
   ]
 })
 export class AppModule {}

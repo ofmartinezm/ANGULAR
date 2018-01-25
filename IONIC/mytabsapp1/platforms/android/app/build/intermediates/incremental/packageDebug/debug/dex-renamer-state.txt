@@ -1,4 +1,4 @@
-#Wed Jan 17 13:53:39 COT 2018
-base.0=D\:\\IONIC\\mytabsapp1\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Wed Jan 24 17:02:43 COT 2018
+base.0=D\:\\GIT_ANGULAR\\IONIC\\mytabsapp1\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
-file.0=D\:\\IONIC\\mytabsapp1\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
+file.0=D\:\\GIT_ANGULAR\\IONIC\\mytabsapp1\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

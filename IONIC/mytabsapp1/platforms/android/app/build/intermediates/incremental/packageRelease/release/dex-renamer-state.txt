@@ -1,0 +1,4 @@
+#Wed Jan 24 17:26:45 COT 2018
+base.0=D\:\\GIT_ANGULAR\\IONIC\\mytabsapp1\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
+renamed.0=classes.dex
+file.0=D\:\\GIT_ANGULAR\\IONIC\\mytabsapp1\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0\\classes.dex

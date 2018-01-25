@@ -19836,7 +19836,7 @@ ion-spinner.spinner-paused svg {
   -ms-flex-pack: center;
   justify-content: center;
   border-top: 0.55px solid rgba(0, 0, 0, 0.3);
-  background: #f8f8f8;
+  background: #999;
 }
 
 .tabs-ios[tabsPlacement=top] .tabbar {
@@ -20005,7 +20005,7 @@ ion-spinner.spinner-paused svg {
 }
 
 .tabs-md .tabbar {
-  background: #f8f8f8;
+  background: #999;
 }
 
 .tabs-md .tab-button {
@@ -20212,7 +20212,7 @@ ion-spinner.spinner-paused svg {
 }
 
 .tabs-wp .tabbar {
-  background: #f8f8f8;
+  background: #999;
 }
 
 .tabs-wp .tab-button {
@@ -25676,4 +25676,16 @@ ion-navbar.toolbar {
   padding-bottom: calc(env(safe-area-inset-bottom) + 4px);
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
+}
+
+custom-header .toolbar-ios {
+  padding-top: 20px !important;
+}
+
+custom-header ion-title.title-ios {
+  padding-top: 15px !important;
+}
+
+page-home h2 {
+  color: #ff0000;
 }

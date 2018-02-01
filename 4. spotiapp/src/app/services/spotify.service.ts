@@ -9,7 +9,7 @@ export class SpotifyService {
   artistas: any[]=[];
   canciones: any={};
   urlSpotify:string='https://api.spotify.com/v1/';
-  token:string='BQDTlqU-Sn4sbozkSyDYSA1hNH-vGv1gj4wQ8D0p0cu1StD7ViwczLqLfXFXZ4dg8FpiEziaKR8NSU16n0w';
+  token:string='BQAxzWkfzzbYcaWL1uDlBwFHM6wYympld_YyDNUnd1UgexbcdZ2OBGnwo7e3VoqKXgYJNi5-iNEjn7Unn5A';
   constructor(public http:HttpClient) {
     console.log('servicio de spotify listo!!');
    }

@@ -1,3 +1,5 @@
+
+ionicframework.com/docs
 Ionic 3 + Firebase + native Facebook login
 Read more at: https://beat.10ztalk.com/2017/12/05/ionic-3-firebase-native-facebook-login/
 
@@ -34,6 +36,9 @@ npm install
 https://apps.ionic.io/
 usuario ofmartinezm
 crear nueva nombreaplicacion
+
+
+ionic config set -g backend pro
 
 ionic login correo@com.comandos //conectarse a ionic view
 

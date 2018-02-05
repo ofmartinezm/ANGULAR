@@ -1,0 +1,4 @@
+#Fri Feb 02 18:19:09 COT 2018
+base.0=D\:\\GIT_ANGULAR\\5. tabsApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
+renamed.0=classes.dex
+file.0=D\:\\GIT_ANGULAR\\5. tabsApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0\\classes.dex

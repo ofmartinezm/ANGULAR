@@ -37,8 +37,14 @@ https://apps.ionic.io/
 usuario ofmartinezm
 crear nueva nombreaplicacion
 
+ejecutar con el git bash
 
 ionic config set -g backend pro
+ionic link --create
+--poner nombre de la aplicacion
+git  add .
+git commit -m "mensaje"
+git push ionic master
 
 ionic login correo@com.comandos //conectarse a ionic view
 
@@ -50,10 +56,18 @@ git push -u origin master
 4. Add your own external Repository as the default origin (optional)
 git remote add origin [YOUR_REPOSITORY_URL]
 git push --set-upstream origin master
-TermsPrivacy Policy© 2017 Drifty Co.  v0.0.443
-IonicDocsBlogHelp & SupportStatus
 
-Cangrejo76
+
+
+Para el tema de la ssh key que era el problema que he tenido yo (debe ser que con la configuré bien al instalar ionic), teneis que hacer lo siguiente:
+
+1. - Lanzar este comando: ionic ssh generate (te pedira genberar una nueva passw)
+
+2.- Una vez hecho esto te dirá que se han modificado dos archivos, que son donde te ha generado la clave publica y privada. Al final de esto te pone los comandos a lanzar que son : 
+
+ionic ssh add (tu archivo.pub)
+
+ionic ssh use (tu otro archivo)
 
 
 
@@ -166,15 +180,22 @@ hacer la instalación  generica
  ionic cordova  build android --release
  
  //generar la llave
- keytool -genkey -v -keystore curso-key
-.keystore -alias curso -keyalg RSA -keysize 2048 -validity 10000
+ keytool -genkey -v -keystore deseos-key 
+ keytool .keystore -alias deseos -keyalg RSA -keysize 2048 -validity 10000
 
-//firmar la aplicacionjarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore curso-key.keystore D:\GIT_ANGULAR\ION
-IC\mytabsapp1\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk curso
+ keytool -genkey -v -keystore deseos2-key.keystore -alias deseos2 -keyalg RSA -keysize 2048 -validity 10000
+ 
+//firmar la aplicacion
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore deseos2-key.keystore 'D:\GIT_ANGULAR\5. tabsApp\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk' deseos2
+
+
 
 //alinear la firmar
 C:\Users\oscar.martinez\AppData\Local\Android\Sdk\build-tools\26.0.2\zipalign -v 4 D:\GIT_ANGULAR\IONI
 C\mytabsapp1\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk MiCursoOfmm.apk
+
+zipalign -v 4 'D:\GIT_ANGULAR\5. tabsApp\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk' MiListaDeseosOfmm.apk
+
  
  //developer.android.com
  

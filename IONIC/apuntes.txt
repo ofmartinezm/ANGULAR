@@ -1,3 +1,5 @@
+https://blog.ng-classroom.com/blog/ionic2/directions-google-js-ionic/
+
 
 ionicframework.com/docs
 Ionic 3 + Firebase + native Facebook login
@@ -194,7 +196,7 @@ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore deseos2-key.key
 C:\Users\oscar.martinez\AppData\Local\Android\Sdk\build-tools\26.0.2\zipalign -v 4 D:\GIT_ANGULAR\IONI
 C\mytabsapp1\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk MiCursoOfmm.apk
 
-zipalign -v 4 'D:\GIT_ANGULAR\5. tabsApp\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk' MiListaDeseosOfmm.apk
+C:\Users\oscar.martinez\AppData\Local\Android\Sdk\build-tools\26.0.2\zipalign -v 4 'D:\GIT_ANGULAR\5. tabsApp\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk' MiListaDeseosOM.apk
 
  
  //developer.android.com

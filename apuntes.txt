@@ -1,0 +1,204 @@
+https://blog.ng-classroom.com/blog/ionic2/directions-google-js-ionic/
+
+
+ionicframework.com/docs
+Ionic 3 + Firebase + native Facebook login
+Read more at: https://beat.10ztalk.com/2017/12/05/ionic-3-firebase-native-facebook-login/
+
+documentacion de ionic
+https://ionicframework.com/docs
+
+https://code.tutsplus.com/es/articles/introduction-to-ionic-2--cms-28193
+https://blog.ng-classroom.com/blog/ionic2/clase-1-feed/
+
+ANDROID_HOME=C:\Users\oscar.martinez\AppData\Local\Android\Sdk
+PATH=C:\Users\oscar.martinez\AppData\Local\Android\Sdk\tools;C:\Users\oscar.martinez\AppData\Local\Android\Sdk\tools\bin; C:\Users\oscar.martinez\AppData\Local\Android\Sdk\platform-tools
+
+
+npm install -g ionic@latest
+
+npm install -g cordova // instalacion apache cordova
+
+ionic integrations enable cordova --quiet // habilitar integracion con apache cordova
+
+Cannot find module '@ionic/app-scripts'
+npm i @ionic/app-scripts
+npm install @ionic/app-scripts@latest --save-dev
+
+
+
+Error: Cannot find module 'typescript'
+npm install --save-dev @angular/cli@latest
+
+Error: ENOENT: no such file or directory, scandir
+npm rebuild node-sass
+
+npm install
+
+https://apps.ionic.io/
+usuario ofmartinezm
+crear nueva nombreaplicacion
+
+ejecutar con el git bash
+
+ionic config set -g backend pro
+ionic link --create
+--poner nombre de la aplicacion
+git  add .
+git commit -m "mensaje"
+git push ionic master
+
+ionic login correo@com.comandos //conectarse a ionic view
+
+ionic link  // relaciona la aplicacion local con la que esta en ionic view
+
+3. Push your code up to the dashboard!
+git push -u origin master
+
+4. Add your own external Repository as the default origin (optional)
+git remote add origin [YOUR_REPOSITORY_URL]
+git push --set-upstream origin master
+
+
+
+Para el tema de la ssh key que era el problema que he tenido yo (debe ser que con la configuré bien al instalar ionic), teneis que hacer lo siguiente:
+
+1. - Lanzar este comando: ionic ssh generate (te pedira genberar una nueva passw)
+
+2.- Una vez hecho esto te dirá que se han modificado dos archivos, que son donde te ha generado la clave publica y privada. Al final de esto te pone los comandos a lanzar que son : 
+
+ionic ssh add (tu archivo.pub)
+
+ionic ssh use (tu otro archivo)
+
+
+
+
+----comandos ionic
+ionic start nombreaplicacion nombreplantilla
+ionic start --list // genera el listado de todas las plantillas que tiene disponible
+ionic generate provider nombre// crear un provider 
+
+Next Steps:
+* Go to your newly created project: cd .\mytabsapp1
+* Get Ionic DevApp for easy device testing: https://bit.ly/ionic-dev-app
+
+
+ionic serve // sube el servidor
+ionic serve --lab //sube el servidor pero se pueden elegir diferentes plataformas android - ios - windows
+ionic serve --android // especifica la plataforma a ejecutar
+
+ionic cordova platform add android  // adiciona plataforma que voy a probar localmente
+ionic cordova emulate android // para cargar la aplicacion en el emulador de android
+
+//adicion de una nueva pagina
+ionic generate page nombrepagina // generar una nueva pagina
+
+ira a app.module.ts adicionar los import y en las secciones declarations y entryComponents adicionar
+los datos de la nueva pagina
+
+ir a tabs.html adicionar la entrada respectiva 
+
+ir a tabs.ts adicionar el import y la variable correspondiente en TabsPage
+
+vovler a subir el ionic serve y probar la aplicacion.
+
+///
+en tabs.html se puede adicionar propiedades al <ion-tabs>
+selectecIndex para indicar si se quiere seleccionar alguna pagina por defecto
+tabsLayout="title-hide" // para que no muestre trexto en los iconos del menu, y otras opciones para 
+ocultar el icono, o que muestre el texto del icono en la parte superior
+
+
+//// SASS es para trabajar con estilos pero mejorados
+cambiar fondo de la seccion del menu 
+en el archivo variables.scss
+$tabs-background:#999; //sobreescribe variables que vienen por defecto
+//se pueden crear nuevas variables
+$textoAlerta: #ff0000;
+vienen definidos colores; primary, secundary, etc;
+se adiciona el atributo color="danger" en algun elemento html, se pueden añadir variables nuevas de color
+y llamarlas en los archivos especificos de cada session .scss
+
+se puede añadir como un estilo css directamente eje;
+h2{
+	color: map-get($colors,danger);
+}
+
+
+
+referencia de iconos 
+https://ionicframework.com/docs/ionicons/
+
+cargar la pagina en el navegador y mostrarlo como si estuviera en android o ios
+localhost:8100/ionic-lab
+
+
+<ion-header no-border> para me muestre linea el encabezado 
+///
+<ion-item *ngFor="let item of miLista" text-left no-padding>
+
+        <ion-avatar item-left><img [src]="'assets/iconos/ico_'+item.id+'.png'"/></ion-avatar>
+        <h2  item-right>{{item.titulo}}</h2>
+        <p item-right>{{item.descripcion}}</p>
+      </ion-item>
+	  
+	  //
+	  
+	  
+
+	  
+	  problema de cross domain desgargar una extension cors para el navegador
+	  
+//adicionar componentes que se pueden compartir entre paginas u otras aplicaciones
+ionic generate coomponent nombreComponente
+
+añadir en  app.module.ts el import
+import { CustomHeaderComponent } from '../components/custom-header/custom-header';
+luego en declarations adicionar;
+CustomHeaderComponent
+
+
+
+//// apache cordova buscar en ionic native/core
+hacer la instalación  generica
+ npm install @ionic-native/core --save
+ //luego se instala el pluggin especifico
+ 
+ se debe hacer la importación del pluggin en el modulo.ts y en el controlador donde se va a ejecutar
+ 
+ //se utiliza para ejecutar la aplicacion directamente en el telefono
+ ionic cordova run plataforma(android)
+ 
+ 
+ //para validar si tenemos un telefono configurado y si esta instalado el developer de android
+ adb devices
+ 
+ // en el navegador
+ chrome://inspect/#devices
+ //saca la lista de los dispositivos conectados al pc
+ 
+ //genera el apk lo deja en la ruta 
+ ionic cordova  build android --release
+ 
+ //generar la llave
+ keytool -genkey -v -keystore deseos-key 
+ keytool .keystore -alias deseos -keyalg RSA -keysize 2048 -validity 10000
+
+ keytool -genkey -v -keystore deseos2-key.keystore -alias deseos2 -keyalg RSA -keysize 2048 -validity 10000
+ 
+//firmar la aplicacion
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore deseos2-key.keystore 'D:\GIT_ANGULAR\5. tabsApp\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk' deseos2
+
+
+
+//alinear la firmar
+C:\Users\oscar.martinez\AppData\Local\Android\Sdk\build-tools\26.0.2\zipalign -v 4 D:\GIT_ANGULAR\IONI
+C\mytabsapp1\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk MiCursoOfmm.apk
+
+C:\Users\oscar.martinez\AppData\Local\Android\Sdk\build-tools\26.0.2\zipalign -v 4 'D:\GIT_ANGULAR\5. tabsApp\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk' MiListaDeseosOM.apk
+
+ 
+ //developer.android.com
+ 
+ 
